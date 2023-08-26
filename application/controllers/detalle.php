@@ -10,6 +10,7 @@ class detalle extends CI_Controller{
     public function index(){
         $this->load->view('V_detalle');
     }
+    
 //funcion insertar
     public function insertarDetalle(){
         $data = array(

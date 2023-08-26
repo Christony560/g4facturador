@@ -5,7 +5,6 @@ class Venta extends CI_Controller{
     function __construct(){
         parent::__construct();
         $this->load->model('Venta_model');
-
     }
 //FUNCION INDEX
     public function index(){
@@ -20,12 +19,7 @@ class Venta extends CI_Controller{
             'venta_fecha' => $this->input->post('fecha'),
             'venta_cliente_id' => $this->input->post('cliente'),
             'venta_MetodoPago_id' => $this->input->post('metodo_pago'),
-        );
-        $venta_id = $this->Venta_model->insertar($data);
-        $this->db->insert_id();
-
-
-        redirect('detalle/index/'.$venta_id);
+        );    
+        redirect('detalle/index'); 
     }
-
 }
