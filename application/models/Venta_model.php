@@ -10,5 +10,7 @@ class Venta_model extends CI_Model{
 //funcion para insertar datos
     public function insertar($data){
         $this->db->insert('venta', $data);
+        $venta_id = $this->db->insert_id(); // Obtiene el ID generado durante la última inserción
+        return $venta_id;
     }
 }

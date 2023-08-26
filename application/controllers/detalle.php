@@ -1,18 +1,24 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-class detalle extends CI_Controller{
-//inicializamos los valores del constructor
-    function __construct(){
+defined('BASEPATH') or exit('No direct script access allowed');
+class detalle extends CI_Controller
+{
+    //inicializamos los valores del constructor
+    function __construct()
+    {
         parent::__construct();
         $this->load->model('detalleModel');
     }
-//funcion index
-    public function index(){
-        $this->load->view('V_detalle');
+    //funcion index
+    public function index($venta_id = null)
+    {
+        // Pasa el venta_id a la vista V_detalle
+        $data['venta_id'] = $venta_id;
+        $this->load->view('V_detalle', $data);
     }
-    
-//funcion insertar
-    public function insertarDetalle(){
+
+    //funcion insertar
+    public function insertarDetalle()
+    {
         $data = array(
             'detalle_venta_id' => $this->input->post('detalle_venta_id'),
             'detalle_producto_id' => $this->input->post('detalle_producto_id'),

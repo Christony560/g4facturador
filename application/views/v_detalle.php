@@ -11,7 +11,7 @@
         <form method="POST" action="<?php echo base_url('Detalle/insertar'); ?>">
             <div class="form-group">
                 <label for="detalle_venta_id">Detalle Venta ID</label> 
-                <input type="text" class="form-style" name="detalle_venta_id" id="detalle_venta_id"  required>
+                <input type="text" class="form-style" name="detalle_venta_id" id="detalle_venta_id" value="<?php echo $venta_id; ?>"readonly required>
             </div>
             <div class="form-group">
                 <label for="detalle_producto_id">Detalle Producto ID</label> 
