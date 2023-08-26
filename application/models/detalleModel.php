@@ -9,13 +9,7 @@ class DetalleModel extends CI_Model{
     }
     //funcion insertar
     public function insertar($data){
-        $this->db->insert('detalle', array(
-            'detalle_venta_id' => $data['venta_id'],
-            'detalle_producto_id' => $data['producto_id'],
-            'detalle_cantidad' => $data['cantidad'],
-            'detalle_precio' => $data['precio'],
-            'detalle_subtotal' => $data['subtotal'],
-        ));
+        $this->db->insert('detalle', $data);
     }
 }
 ?>

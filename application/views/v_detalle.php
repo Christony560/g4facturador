@@ -8,7 +8,7 @@
 <body>
 <div class="form-container">
         <h1>Ingreso de Detalle de Venta</h1>
-        <form method="POST" action="<?php echo base_url('Detalle/insertar'); ?>">
+        <form method="POST" action="<?php echo site_url('Detalle/insertarDetalle'); ?>">
             <div class="form-group">
                 <label for="detalle_venta_id">Detalle Venta ID</label> 
                 <input type="text" class="form-style" name="detalle_venta_id" id="detalle_venta_id" value="<?php echo $venta_id; ?>"readonly required>
@@ -26,8 +26,8 @@
                 <input type="number" class="form-style" name="detalle_cantidad" id="detalle_cantidad" required>
             </div>
             <div class="form-group">
-                <label for="detalle_precio_unitario">Precio Unitario</label> 
-                <input type="number" class="form-style" name="detalle_precio_unitario" id="detalle_precio_unitario" step="0.01" required>
+                <label for="Detalle_precioUnitario	">Precio Unitario</label> 
+                <input type="number" class="form-style" name="Detalle_precioUnitario	" id="Detalle_precioUnitario	" step="0.01" required>
             </div>
             <button type="submit" class="btn" name="Guardar">Guardar Detalle</button>
         </form>

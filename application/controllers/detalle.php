@@ -24,7 +24,7 @@ class detalle extends CI_Controller
             'detalle_producto_id' => $this->input->post('detalle_producto_id'),
             'detalle_descripcion' => $this->input->post('detalle_descripcion'),
             'detalle_cantidad' => $this->input->post('detalle_cantidad'),
-            'detalle_precio_unitario' => $this->input->post('detalle_precio_unitario'),
+            'Detalle_precioUnitario	' => $this->input->post('Detalle_precioUnitario'),
         );
         $this->detalleModel->insertar($data);
         redirect('detalle/index');
