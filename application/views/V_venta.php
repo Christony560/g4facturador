@@ -11,7 +11,7 @@
         <form id="venta-form" method="POST" action="<?php echo site_url('venta/insertar') ?>">
         <div class="form-group">
                 <label for="fecha">Fecha</label> 
-                <input type="date" class="form-style" name="fecha" id="fecha" required placeholder="Fecha">
+                <input type="date" class="form-style" id="venta_fecha" name="venta_fecha" value="<?php date_default_timezone_set('America/Guatemala'); echo date('Y-m-d'); ?>" readonly>
             </div>
             <div class="form-group mt-2">
                 <label for="cliente">Cliente</label>
