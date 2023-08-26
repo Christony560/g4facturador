@@ -16,7 +16,7 @@ class Venta extends CI_Controller{
 //FUNCION INSERTAR
     public function insertar(){
         $data = array(
-            'venta_fecha' => $this->input->post('fecha'),
+            'venta_fecha' => $this->input->post('venta_fecha'),
             'venta_cliente_id' => $this->input->post('cliente'),
             'venta_MetodoPago_id' => $this->input->post('metodo_pago'),
         );
