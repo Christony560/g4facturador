@@ -17,15 +17,15 @@ class Venta extends CI_Controller{
 //FUNCION INSERTAR
     public function insertar(){
         $data = array(
-            'fecha' => $this->input->post('fecha'),
-            'cliente' => $this->input->post('cliente'),
-            'producto' => $this->input->post('producto'),
-            'cantidad' => $this->input->post('cantidad'),
-            'precio' => $this->input->post('precio'),
-            'total' => $this->input->post('total')
+            'venta_fecha' => $this->input->post('fecha'),
+            'venta_cliente_id' => $this->input->post('cliente'),
+            'venta_MetodoPago_id' => $this->input->post('metodo_pago'),
         );
-        $this->Venta_model->insertar($data);
-        redirect('Venta/index');
+        $venta_id = $this->Venta_model->insertar($data);
+        $this->db->insert_id();
+
+
+        redirect('detalle/index/'.$venta_id);
     }
 
 }

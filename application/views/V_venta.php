@@ -8,8 +8,8 @@
 <body>
     <div class="form-container">
        <h1>Registro de Ventas</h1>
-        <form method="POST" action="<?php echo base_url('Venta/insertar') ?>">
-            <div class="form-group">
+        <form id="venta-form" method="POST" action="<?php echo site_url('venta/insertar') ?>">
+        <div class="form-group">
                 <label for="fecha">Fecha</label> 
                 <input type="date" class="form-style" name="fecha" id="fecha" required placeholder="Fecha">
             </div>
@@ -32,8 +32,8 @@
                 </select>
              <button type="submit" class="btn" name="Guardar">Guardar</button>
             <button class="btn" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
- 
         </form>
     </div>
 </body>
 </html>
+
