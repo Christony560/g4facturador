@@ -13,7 +13,7 @@ class detalle extends CI_Controller
     {
         // Pasa el venta_id a la vista V_detalle
         $data['venta_id'] = $venta_id;
-        $this->load->view('V_detalle', $data);
+        $this->load->view('example', $data);
     }
 
     //funcion insertar

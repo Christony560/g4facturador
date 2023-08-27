@@ -7,14 +7,14 @@
 </head>
 <body>
 <div class="form-container">
-        <h1>Ingreso de Detalle de Venta</h1>
+        <h1>Detalle de Venta</h1>
         <form method="POST" action="<?php echo site_url('Detalle/insertarDetalle'); ?>">
             <div class="form-group">
-                <label for="detalle_venta_id">Detalle Venta ID</label> 
+                <label for="detalle_venta_id">No. Factura</label> 
                 <input type="text" class="form-style" name="detalle_venta_id" id="detalle_venta_id" value="<?php echo $venta_id; ?>"readonly required>
             </div>
             <div class="form-group">
-                <label for="detalle_producto_id">Detalle Producto ID</label> 
+                <label for="detalle_producto_id">Producto</label> 
                 <input type="text" class="form-style" name="detalle_producto_id" id="detalle_producto_id" required>
             </div>
             <div class="form-group">
@@ -26,10 +26,10 @@
                 <input type="number" class="form-style" name="detalle_cantidad" id="detalle_cantidad" required>
             </div>
             <div class="form-group">
-                <label for="Detalle_precioUnitario	">Precio Unitario</label> 
-                <input type="number" class="form-style" name="Detalle_precioUnitario	" id="Detalle_precioUnitario	" step="0.01" required>
+                <label for="Detalle_precioUnitario">Precio Unitario</label> 
+                <input type="number" class="form-style" name="Detalle_precioUnitario" id="Detalle_precioUnitario" step="0.01" required>
             </div>
-            <button type="submit" class="btn" name="Guardar">Guardar Detalle</button>
+            <button type="submit" class="btn" name="Guardar">Finalizar Compra</button>
         </form>
     </div>
 </body>
