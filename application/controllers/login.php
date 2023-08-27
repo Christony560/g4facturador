@@ -26,13 +26,22 @@ class Login extends CI_Controller
             $user = $this->loginModel->authenticate($email, $password);
 
             if ($user) {
-                // Iniciar sesión y redirigir al dashboard
-                $this->session->set_userdata('user', $user->Usuario_correo);
-                redirect('dashboard/index');
+                switch ($user->usuario_estado) {
+                    case 1:
+                        // Iniciar sesión y redirigir al dashboard
+                        $this->session->set_userdata('user', $user->Usuario_correo);
+                        redirect('dashboard/index');
+                        break;
+                    default:
+                        $login_error['login_error'] = "El usuario no está activo.";
+                        break;
+                }
             } else {
                 $login_error['login_error'] = "Credenciales incorrectas. Inténtalo de nuevo.";
-                $this->load->view('V_login', $login_error);
             }
+            
+            $this->load->view('V_login', $login_error);
+            
         } else {
             $this->load->view('V_login');
         }

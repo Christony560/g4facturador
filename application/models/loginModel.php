@@ -11,9 +11,12 @@ class loginModel extends CI_Model {
 
     // Lllamada de datos para loguin se deben traer los datos  correo, password, estado y roll
     public function authenticate($email, $password) {
+        $this->db->select('usuario_email, usuario_password, usuario_estado');
+        $this->db->from('usuario');
         $this->db->where('usuario_email', $email);
-        $this->db->where('usuario_password', sha1($password)); // Aplicamos el cifrado SHA-1 a la contraseña
-        $userregistrado = $this->db->get('usuario')->row();
+        $this->db->where('usuario_password', sha1($password));
+        $this->db->where('usuario_estado', 1); // Comprobamos el estado del usuario
+        $userregistrado = $this->db->get()->row();
         return $userregistrado;
     }
     public function emailExists($email) {
