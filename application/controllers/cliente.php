@@ -10,6 +10,6 @@
 // FUNCION INDEX
      public function index(){
          $data['clientes'] = $this->clienteModel->getClientes();
-         $this->load->view('V_venta', $cliente);
+         $this->load->view('V_venta', $data);
      }
 }
