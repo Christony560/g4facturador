@@ -23,6 +23,6 @@ class Venta extends CI_Controller{
         $venta_id = $this->Venta_model->insertar($data);
 
     // Redireccionar a la página de ingreso de detalle con el venta_id en la URL
-    redirect('exampleController/index/' . $venta_id); 
+    redirect('detalle/index/' . $venta_id); 
     }
 }

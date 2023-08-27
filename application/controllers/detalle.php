@@ -7,13 +7,14 @@ class detalle extends CI_Controller
     {
         parent::__construct();
         $this->load->model('detalleModel');
+        $this->load->library('session');
     }
     //funcion index
     public function index($venta_id = null)
     {
         // Pasa el venta_id a la vista V_detalle
         $data['venta_id'] = $venta_id;
-        $this->load->view('example', $data);
+        $this->load->view('V_detalle', $data);
     }
 
     //funcion insertar
@@ -27,6 +28,7 @@ class detalle extends CI_Controller
             'Detalle_precioUnitario	' => $this->input->post('Detalle_precioUnitario'),
         );
         $this->detalleModel->insertar($data);
+        $this->session->set_flashdata('success_message', 'El detalle se ha insertado correctamente.');
         redirect('detalle/index');
     }
 }
