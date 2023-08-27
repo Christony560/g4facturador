@@ -69,4 +69,11 @@ class Login extends CI_Controller
         $this->load->view('V_login', $registration_success);
        // redirect('login/index');
     }
+
+    public function logout()
+{
+    $this->session->unset_userdata('user'); // Elimina los datos de sesión
+    $this->session->sess_destroy(); // Destruye la sesión
+    redirect('login/index'); // Redirige al inicio de sesión
+}
 }

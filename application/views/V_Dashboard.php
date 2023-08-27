@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<button onclick="location.href=''">Regresar</button>
+	<button onclick="location.href='<?php echo site_url('login/logout'); ?>'">Cerrar Sesion</button>
 	
 	<h1>Catálogo de Opciones</h1>
 
