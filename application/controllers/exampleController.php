@@ -39,6 +39,7 @@ class ExampleController extends CI_Controller {
         }
         echo "Venta guardada correctamente";
         
+
     }
 
 }
