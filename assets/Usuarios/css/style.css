@@ -1,35 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 body {
-  background-color: #1f2029;
-  color: green;
-}
-/* Estilos específicos para los elementos que deseas resaltar en la vista */
-.form-control {
-  background-color: #1f2029;
-  color: green;
-  border-color: green;
-}
-.btn-primary {
-  background-color: #1f2029;
-  border-color: green;
-}
-/* Agrega estos estilos adicionales para la tabla */
-.table {
-background-color: #1f2029;
-color: green;
-border-color: green;
+  background-color: #1B2735;
+  color: #ffeba7;
 }
 
-/* Estilo para las celdas de encabezado y contenido de la tabla */
+/* Actualiza los estilos para los elementos de formulario */
+.form-control,
+.form-select {
+  background-color: #020305;
+  color: #ffeba7;
+  border-color: #ffeba7;
+}
+
+/* Actualiza los estilos para los botones */
+.btn-primary {
+  background-color: #ffeba7;
+  border-color: #ffeba7;
+  color: #000000;
+}
+
+/* Actualiza los estilos para la tabla */
+.table {
+  background-color: #020305;
+  color: #ffeba7;
+  border-color: #ffeba7;
+}
+
+/* Actualiza los estilos para las celdas de encabezado y contenido de la tabla */
 .table th,
 .table td {
-background-color: #1f2029;
-color: green;
-border-color: green;
+  background-color: #020305;
+  color: #ffeba7;
+  border-color: #ffeba7;
 }
 
-/* Estilo para resaltar filas al pasar el mouse por encima */
+/* Actualiza los estilos para resaltar filas al pasar el mouse por encima */
 .table tbody tr:hover {
-background-color: green;
-color: #1f2029;
+  background-color: #ffeba7;
+  color: #020305;
+}
+
+/* Actualiza los estilos para los enlaces */
+.link {
+  color: #ffeba7;
+}
+
+.link:hover {
+  color: #c4c3ca;
 }

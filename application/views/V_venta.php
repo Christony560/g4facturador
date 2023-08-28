@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Registro de Ventas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url('assets/Venta/style.css'); ?>">
 </head>
 <body>
-    <div class="form-container">
+
+<div class="">
+    <button class="btn" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
+    <div class="form-container mt-3">
        <h1>Registro de Ventas</h1>
         <form id="venta-form" method="POST" action="<?php echo site_url('venta/insertar') ?>">
         <div class="form-group">
@@ -31,9 +36,9 @@
                 <option value="5">Pago Móvil</option>
                 </select>
              <button type="submit" class="btn" name="Guardar">Guardar</button>
-            <button class="btn" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
         </form>
     </div>
+</div>
 </body>
 </html>
 
