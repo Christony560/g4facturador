@@ -11,6 +11,7 @@ class producto extends CI_Controller {
 		$this->data['resultados'] = $resultados;
 		$this->load->view('V_producto', $this->data);
     }
+
     public function agregar() {
         $nombre = $this->input->post('nombre');
         $stock = $this->input->post('stock');
@@ -25,6 +26,7 @@ class producto extends CI_Controller {
         }
         redirect('producto/index');
     }
+    
 
 
 

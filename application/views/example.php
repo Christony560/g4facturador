@@ -9,7 +9,7 @@
 <body>
     <div class="form-container">
         <h1>Ingreso de Venta</h1>
-        <form method="POST" action="<?php echo base_url('Venta/guardar'); ?>">
+        <form method="POST" action="<?php echo site_url('exampleController/guardar'); ?>">
             <div class="form-group">
                 <label for="detalle_venta_id">Numero de Factura: </label>
                 <input type="text" class="form-style" name="detalle_venta_id" id="detalle_venta_id"
@@ -24,42 +24,35 @@
                     <th>Precio Unitario</th>
                 </tr>
                 <tr>
-                    <td><select name="producto" id="producto" class="form-style" required>
+                    <td><select name="detalle_producto_id[]" id="lista_productos" class="form-style" required>
                             <option value="">Seleccione un producto</option>
                             <?php foreach ($productos as $producto): ?>
-                                <option value="<?php echo $producto->producto_id; ?>"><?php echo $producto->producto_nombre; ?></option>
+                                <option value="<?php echo $producto->Producto_id; ?>"><?php echo $producto->Producto_nombre; ?></option>
                             <?php endforeach; ?>
                         </select></td>
-                    <td><input class="form-style" type="text" name="detalle_producto_id[]" required></td>
                     <td><input class="form-style" type="text" name="detalle_descripcion[]" required></td>
                     <td><input class="form-style" type="number" name="detalle_cantidad[]" required></td>
-                    <td><input class="form-style" type="number" step="0.01" name="detalle_precio_unitario[]" required>
-                    </td>
+                    <td><input class="form-style" type="number" step="0.01" name="detalle_precio_unitario[]" required></td>
                 </tr>
             </table>
 
             <button type="button" class="btn" onclick="agregarFila()">Agregar Producto</button>
-
-            <button type="submit" class="btn" name="Guardar">Guardar Venta</button>
+            <button type="submit" class="btn" name="Guardar" onclick="return confirm('¿Estás seguro de que deseas finalizar la compra?')">Guardar Venta</button>
         </form>
     </div>
 
     <script>
         function agregarFila() {
             var table = document.getElementById("detalle_table");
-            var row = table.insertRow();
-
-            var productoIdCell = row.insertCell();
-            var descripcionCell = row.insertCell();
-            var cantidadCell = row.insertCell();
-            var precioUnitarioCell = row.insertCell();
-
-            productoIdCell.innerHTML = '<input type="text" name="detalle_producto_id[]" required>';
-            descripcionCell.innerHTML = '<input type="text" name="detalle_descripcion[]" required>';
-            cantidadCell.innerHTML = '<input type="number" name="detalle_cantidad[]" required>';
-            precioUnitarioCell.innerHTML = '<input type="number" step="0.01" name="detalle_precio_unitario[]" required>';
+            var filaContenedor = document.createElement('tr');
+            filaContenedor.innerHTML = `
+                <td>${document.getElementById('lista_productos').outerHTML}</td>
+                <td><input class="form-style" type="text" name="detalle_descripcion[]" required></td>
+                <td><input class="form-style" type="number" name="detalle_cantidad[]" required></td>
+                <td><input class="form-style" type="number" step="0.01" name="detalle_precio_unitario[]" required></td>
+            `;
+            table.appendChild(filaContenedor);
         }
     </script>
 </body>
-
-</html
+</html>

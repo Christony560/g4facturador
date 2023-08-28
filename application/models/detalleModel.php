@@ -8,8 +8,8 @@ class DetalleModel extends CI_Model{
         $this->load->database();
     }
     //funcion insertar
-    public function insertar($data){
-        $this->db->insert('detalle', $data);
+    public function insertar($detalle_data){
+        $this->db->insert('detalle', $detalle_data);
     }
 }
 ?>

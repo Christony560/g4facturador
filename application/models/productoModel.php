@@ -18,5 +18,11 @@ class productoModel extends CI_Model {
  		$query = $this->db->get();
 		return $query->result();
 	}
+    public function sendProductos(){
+        $this->db->select('Producto_id,Producto_nombre');
+		$this->db->from('Producto'); 
+ 		$query = $this->db->get();
+		return $query->result();
+    }
 }
 ?>

@@ -5,11 +5,13 @@ class ExampleController extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('Venta_model');
+        $this->load->model('productoModel');
+        $this->load->model('detalleModel');
     }
 
     public function index($venta_id = null)
     {
-       // $producto['productos'] = $this->getProductos(); // Obtiene los datos de productos
+        $data['productos'] = $this->productoModel->sendProductos();
         // Pasa el venta_id a la vista V_detalle
         $data['venta_id'] = $venta_id;
         $this->load->view('example', $data);
@@ -31,9 +33,9 @@ class ExampleController extends CI_Controller {
                 'detalle_producto_id' => $detalle_producto_id[$i],
                 'detalle_descripcion' => $detalle_descripcion[$i],
                 'detalle_cantidad' => $detalle_cantidad[$i],
-                'detalle_precio_unitario' => $detalle_precio_unitario[$i]
+                'detalle_precioUnitario' => $detalle_precio_unitario[$i]
             );
-            $this->Venta_model->insertarDetalleVenta($detalle_data);
+            $this->detalleModel->insertar($detalle_data);
         }
         echo "Venta guardada correctamente";
         
