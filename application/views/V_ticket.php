@@ -5,46 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recibo de Venta</title>
-    <style>
-        /* Estilos CSS para el recibo */
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .recibo {
-            width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .titulo {
-            text-align: center;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .detalle {
-            margin-bottom: 10px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-        }
-
-        .detalle:last-child {
-            border-bottom: none;
-        }
-
-        .descripcion {
-            font-weight: bold;
-        }
-
-        .precio {
-            float: right;
-        }
-    </style>
+    <link rel="stylesheet" href="<?php echo base_url('assets/Ticket/Css/style.css'); ?>">
 </head>
-
 <body>
     <div class="recibo">
         <div class="titulo">Recibo de Venta</div>
@@ -78,5 +40,4 @@
         <?php endforeach; ?>
     </div>
 </body>
-
 </html>

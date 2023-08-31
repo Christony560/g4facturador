@@ -4,61 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="<?php echo base_url('assets/Usuarios/css/style.css'); ?>">
     <title>Formulario de Registro</title>
-    <style>
-        /* Actualiza el fondo del body y el color del texto */
-body {
-  background-color: #1B2735;
-  color: #ffeba7;
-}
-
-/* Actualiza los estilos para los elementos de formulario */
-.form-control,
-.form-select {
-  background-color: #020305;
-  color: #ffeba7;
-  border-color: #ffeba7;
-}
-
-/* Actualiza los estilos para los botones */
-.btn-primary {
-  background-color: #ffeba7;
-  border-color: #ffeba7;
-  color: #000000;
-}
-
-/* Actualiza los estilos para la tabla */
-.table {
-  background-color: #020305;
-  color: #ffeba7;
-  border-color: #ffeba7;
-}
-
-/* Actualiza los estilos para las celdas de encabezado y contenido de la tabla */
-.table th,
-.table td {
-  background-color: #020305;
-  color: #ffeba7;
-  border-color: #ffeba7;
-}
-
-/* Actualiza los estilos para resaltar filas al pasar el mouse por encima */
-.table tbody tr:hover {
-  background-color: #ffeba7;
-  color: #020305;
-}
-
-/* Actualiza los estilos para los enlaces */
-.link {
-  color: #ffeba7;
-}
-
-.link:hover {
-  color: #c4c3ca;
-}
-
-    </style>
 </head>
 <body>
 <button class = "btn btn-secondary mt-4" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
