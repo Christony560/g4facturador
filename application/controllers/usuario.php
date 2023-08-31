@@ -17,6 +17,10 @@ function __construct()
 		$this->load->view('V_usuario', $this->data);
 	}
 
+    public function editarUser(){
+        $this->load->view('V_editar-usuario');
+    }
+
     function guardarEdicion(){
         $password= $this->input->post('ed_pasword');
         $decod = base64_decode($password);
