@@ -79,17 +79,17 @@
                         <select class="form-select" name="estado" id="estado" required>
                           <option value="" disabled>Seleccione estado</option>
                           <option value="1"selected>Activo</option>
-                          <option value="0" disabled>Inactivo</option>
+                          <option value="2" disabled>Inactivo</option>
                         </select>
                       </div>
                       <div class="form-group mt-2">
-                        <select class="form-select" name="rol" id="rol" required>
-                          <option value="0">Seleccione un rol</option>
-                          <option value="1"disabled>Administrador</option>
-                          <option value="2">Normal</option>
-                          <option value="3"disabled>Editor</option>
-                          <option value="4"selected>Invitado</option>
-                          <option value="5"disabled>Moderador</option>
+                          <select class="form-select" name="rol" id="rol" required>
+                            <option value="0">Seleccione un rol</option>
+                            <option value="1"disabled>Administrador</option>
+                            <option value="2">Normal</option>
+                            <option value="3"disabled>Editor</option>
+                            <option value="4"selected>Invitado</option>
+                            <option value="5"disabled>Moderador</option>
                         </select>
                       </div>
                       <button class="btn btn-primary mt-2" type="submit" class="btn mt-4">Register</button>
