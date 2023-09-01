@@ -31,11 +31,11 @@
                       <div class="section text-center">
                         <h4 class="mb-4 pb-3">Ingresar</h4>
                         <div class="form-group">
-                          <input autocomplete="off" type="email" class="form-style" name="email" placeholder="Email">
+                          <input autocomplete="off" type="email" class="form-style" name="email" placeholder="Email" required>
                           <i class="input-icon uil uil-at"></i>
                         </div>
                         <div class="form-group mt-2">
-                          <input autocomplete="off" type="password" class="form-style" name="password" placeholder="Password">
+                          <input autocomplete="off" type="password" class="form-style" name="password" placeholder="Password" required>
                           <i class="input-icon uil uil-lock-alt"></i>
                         </div>
                         <button type="submit" class="btn mt-4">Ingresar</button>
