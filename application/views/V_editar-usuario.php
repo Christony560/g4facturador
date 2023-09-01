@@ -16,21 +16,21 @@
     <div class="container mt-4">
         <h1>Modificacion / Eliminación de Usuarios</h1>
         <!-- Area de Edicion-->
-        <form action="<?php echo site_url('usuario/guardarEdicion'); ?>" method="post">
+        <form action="<?php echo site_url('usuario/guardarEdicion'); ?>" method="post">    
             <h5>Editar Registro</h5>
-            <div class="container">
+                <div class="container">
                 <!-- Inicio de Campos de edición Usuarios -->
                 <div class="form-group">
                     <label for="ed_nombre">Nombre</label>
-                    <input type="text" class="form-control" name="ed_nombre" id="ed_nombre" required>
+                    <input type="text" class="form-control" name="ed_nombre" id="ed_nombre" value="<?php echo $usuario->usuario_nombre;?>" required>
                 </div>
                 <div class="form-group">
                     <label for="ed_apellido">Apellido</label>
-                    <input type="text" class="form-control" name="ed_apellido" id="ed_apellido" required>
+                    <input type="text" class="form-control" name="ed_apellido" id="ed_apellido" value="<?php echo $usuario->usuario_apellido?>"required>
                 </div>
                 <div class="form-group">
                     <label for="ed_email">email</label>
-                    <input type="email" class="form-control" name="ed_email" id="ed_email" required
+                    <input type="email" class="form-control" name="ed_email" id="ed_email" value="<?php echo $usuario->usuario_email;?>" required
                         autocomplete="email">
                 </div>
                 <div class="form-group">
@@ -58,7 +58,7 @@
                     </select>
                 </div>
                 <div>
-                    <input type="hidden" id="usuario_id" name="usuario_id">
+                    <input type="hidden" id="usuario_id" name="usuario_id" value="<?php echo $usuario->usuario_id;?>">
                 </div>
                 <div class="container mt-3">
                     <button onclick="location.href='<?php echo site_url('usuario/index'); ?>'" type="submit"

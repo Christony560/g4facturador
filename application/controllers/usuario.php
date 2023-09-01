@@ -17,8 +17,9 @@ function __construct()
 		$this->load->view('V_usuario', $this->data);
 	}
 
-    public function editarUser(){
-        $this->load->view('V_editar-usuario');
+    public function editarUser($usuarioId){
+        $usuarioData = $this->usuarioModel->getUsuarioById($usuarioId);
+        $this->load->view('V_editar-usuario', ['usuario' => $usuarioData]);
     }
 
     function guardarEdicion(){
@@ -27,8 +28,8 @@ function __construct()
         $data = array(
             'usuario_nombre' => $this->input->post('ed_nombre'),
             'usuario_apellido' => $this->input->post('ed_apellido'),
-            'usuario_correo' => $this->input->post('ed_correo'),
-            'usuario_pasword' => sha1($decod),    
+            'usuario_email' => $this->input->post('ed_email'),
+            'usuario_password' => sha1($decod),    
             'usuario_estado' => $this->input->post('ed_estado') ,  
             'usuario_rol_id' => $this->input->post('ed_rol')
         );
