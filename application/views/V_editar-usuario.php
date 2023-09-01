@@ -67,6 +67,22 @@
         </form>
     </div>
     <!-- Fin de Campos de Edición Usuario-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        
+    <script>
+        
+            //cifrar la contraseña
+            function cifrarpass() {
+                var pasword = $("#ed_pasword").val();
+                var codificada = btoa(pasword);
+                console.log(codificada);
+                $("#ed_pasword").val(codificada);
+                console.log("Finalice");
+            }
+    </script>
 
 </body>
 
