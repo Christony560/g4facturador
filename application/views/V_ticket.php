@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recibo de Venta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url('assets/Ticket/Css/style.css'); ?>">
+    <title>Recibo de Venta</title>
+    
 </head>
 <body>
+<button class="btn btn-secondary mt-4"
+        onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
     <div class="recibo">
         <div class="titulo">Recibo de Venta</div>
         <?php foreach ($detalles as $detalle): ?>
